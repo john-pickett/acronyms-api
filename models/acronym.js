@@ -3,7 +3,7 @@ const acronym = (sequelize, DataTypes) => {
         acronym: {
             type: DataTypes.STRING
         },
-        name: {
+        def: {
             type: DataTypes.STRING
         },
         notes: {

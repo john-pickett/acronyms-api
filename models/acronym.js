@@ -7,7 +7,7 @@ const acronym = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         notes: {
-            type: DataTypes.STRING
+            type: DataTypes.TEXT
         }
     })
     return acronym;

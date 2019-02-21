@@ -13,4 +13,4 @@ const acronym = (sequelize, DataTypes) => {
     return acronym;
 }
 
-module.exports = user;
+module.exports = acronym;

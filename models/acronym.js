@@ -1,5 +1,5 @@
 const acronym = (sequelize, DataTypes) => {
-    constAcronym = sequelize.define('acronym', {
+    const Acronym = sequelize.define('acronym', {
         acronym: {
             type: DataTypes.STRING
         },
@@ -10,7 +10,7 @@ const acronym = (sequelize, DataTypes) => {
             type: DataTypes.TEXT
         }
     })
-    return acronym;
+    return Acronym;
 }
 
 module.exports = acronym;

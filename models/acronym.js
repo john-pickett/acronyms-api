@@ -1,6 +1,6 @@
 const acronym = (sequelize, DataTypes) => {
     const Acronym = sequelize.define('acronym', {
-        acronym: {
+        abrev: {
             type: DataTypes.STRING
         },
         def: {

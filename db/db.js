@@ -6,7 +6,8 @@ const sequelize = new Sequelize(process.env.DB_DB_NAME, process.env.DB_USER, pro
 });
 
 const models = {
-  User: sequelize.import('../models/user')
+  User: sequelize.import('../models/user'),
+  Acronym: sequelize.import('../models/acronym')
 }
 
 module.exports = { sequelize, models };

@@ -13,7 +13,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 // connects to Postgres and then starts up the express server
-sequelize.sync({force: true}).then(() => {
+sequelize.sync({force: false}).then(() => {
 	app.listen(process.env.PORT || port, () => {
 	  console.log(`Server running on port ${port}`)
 	})

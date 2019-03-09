@@ -12,6 +12,14 @@ const port = 3000;
 // for parsing JSON-encoded req.body(ies)
 app.use(bodyParser.json());
 
+// allowing for CORS requests
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, HEAD, OPTIONS, PUT, DELETE, PATCH");
+    next();
+  });
+
 // connects to Postgres and then starts up the express server
 sequelize.sync({force: false}).then(() => {
 	app.listen(process.env.PORT || port, () => {

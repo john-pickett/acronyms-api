@@ -79,3 +79,15 @@ app.post('/acronyms', (req, res) => {
 		console.log('err ' + err)
 	});
 });
+
+app.delete('/acronyms/:id', (req, res) => {
+	const id = req.params.id;
+
+	Acronym.findOne({
+		where: { id }
+	}).then((acro) => {
+		acro.destroy().then((record) => {
+			res.send('Record id: ' + id + ' was deleted.')
+		})
+	})
+})

@@ -50,7 +50,7 @@ app.post('/users', (req, res) => {
 	});
 
 	user.save().then((record) => {
-		res.send('User saved: ' + JSON.stringify(record));
+		res.send(JSON.stringify(record));
 	}).catch((err) => {
 		console.log('err ' + err)
 	});
@@ -74,7 +74,7 @@ app.post('/acronyms', (req, res) => {
 	})
 
 	acronym.save().then((record) => {
-		res.send('Acronym saved: ' + JSON.stringify(record));
+		res.send(JSON.stringify(record));
 	}).catch((err) => {
 		console.log('err ' + err)
 	});
